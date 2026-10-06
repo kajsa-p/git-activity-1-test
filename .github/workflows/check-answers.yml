@@ -13,7 +13,7 @@ jobs:
 
       - name: Check Question 1
         run: |
-          answer=$(cat questions/question1.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(grep "Answer:" questions/question1.txt | sed 's/Answer://:' | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "mouse" ]; then
             echo "Question 1 correct"
@@ -24,7 +24,7 @@ jobs:
 
       - name: Check Question 2
         run: | 
-          answer=$(cat questions/question2.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(grep "Answer:" questions/question2.txt | sed 's/Answer://:' | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "code" ]; then
             echo "Question 2 correct"
@@ -35,7 +35,7 @@ jobs:
           
       - name: Check Question 3
         run: |
-          answer=$(cat questions/question3.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(grep "Answer:" questions/question3.txt | sed 's/Answer://:' | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "gummy bear" ]; then
             echo "Question 3 correct"
@@ -46,7 +46,7 @@ jobs:
 
       - name: Check Question 4
         run: |
-          answer=$(cat questions/question4.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(grep "Answer:" questions/question4.txt | sed 's/Answer://:' | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "keyboard" ]; then
             echo "Question 4 correct"
@@ -57,7 +57,7 @@ jobs:
 
       - name: Check Question 5
         run: |
-          answer=$(cat questions/question5.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(grep "Answer:" questions/question5.txt | sed 's/Answer://:' | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "ton" ]; then
             echo "Question 5 correct"
