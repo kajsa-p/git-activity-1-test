@@ -15,7 +15,7 @@ jobs:
         run: 
           answer=$(cat question1.txt)
 
-          if ["$answer" = "${{ secrets.Q1_ANSWER }}"]; then
+          if ["$answer" = "mouse"]; then
             echo "Question 1 correct"
           else
             echo "Question 1 incorrect"
