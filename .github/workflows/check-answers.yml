@@ -13,7 +13,7 @@ jobs:
 
       - name: Check Question 1
         run: |
-          answer=$(cat question1.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(cat questions/question1.txt | tr '[:upper:]' '[:lower:]' | xargs)
 
           if [ "$answer" = "mouse" ]; then
             echo "Question 1 correct"
@@ -24,9 +24,9 @@ jobs:
 
       - name: Check Question 2
         run: | 
-          answer=$(cat question2.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(cat questions/question2.txt | tr '[:upper:]' '[:lower:]' | xargs)
 
-          if ["$answer" = "code"]; then
+          if [ "$answer" = "code" ]; then
             echo "Question 2 correct"
           else
             echo "Question 2 incorrect"
@@ -35,9 +35,9 @@ jobs:
           
       - name: Check Question 3
         run: |
-          answer=$(cat question3.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(cat questions/question3.txt | tr '[:upper:]' '[:lower:]' | xargs)
 
-          if ["$answer" = "gummy bear"]; then
+          if [ "$answer" = "gummy bear" ]; then
             echo "Question 3 correct"
           else
             echo "Question 3 incorrect"
@@ -46,9 +46,9 @@ jobs:
 
       - name: Check Question 4
         run: |
-          answer=$(cat question4.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(cat questions/question4.txt | tr '[:upper:]' '[:lower:]' | xargs)
 
-          if ["$answer" = "keyboard"]; then
+          if [ "$answer" = "keyboard" ]; then
             echo "Question 4 correct"
           else
             echo "Question 4 incorrect"
@@ -57,9 +57,9 @@ jobs:
 
       - name: Check Question 5
         run: |
-          answer=$(cat question5.txt | tr '[:upper:]' '[:lower:]' | xargs)
+          answer=$(cat questions/question5.txt | tr '[:upper:]' '[:lower:]' | xargs)
 
-          if ["$answer" = "ton"]; then
+          if [ "$answer" = "ton" ]; then
             echo "Question 5 correct"
           else
             echo "Question 5 incorrect"
